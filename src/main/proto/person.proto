@@ -1,14 +1,13 @@
 syntax = "proto3";
+import "common/address.proto";
+import "common/car.proto";
 
 option java_multiple_files = true;
 option java_package = "com.learningprotobuf.models";
 
-/*
- This is my person proto file
- */
 message Person{
-  // name field
   string name = 1;
-  // age field
   int32 age = 2;
+  common.Address address = 3;
+  repeated common.Car car = 4;
 }

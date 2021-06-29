@@ -1,6 +1,6 @@
 package com.learningprotobuf;
 
-import com.leaningproto.models.Person;
+import com.learningprotobuf.models.Person;
 
 import java.io.IOException;
 import java.nio.file.Files;

@@ -1,0 +1,11 @@
+syntax = "proto3";
+import "common/car.proto";
+
+package common;
+
+option java_multiple_files = true;
+option java_package = "com.learningprotobuf.models";
+
+message Dealer{
+  map<int32, common.Car> model = 1;
+}
