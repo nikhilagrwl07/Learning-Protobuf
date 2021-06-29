@@ -1,13 +1,16 @@
 syntax = "proto3";
 import "common/address.proto";
 import "common/car.proto";
+import "google/protobuf/wrappers.proto";
 
 option java_multiple_files = true;
 option java_package = "com.learningprotobuf.models";
 
 message Person{
-  string name = 1;
-  int32 age = 2;
+  // 1 - 15 - 1 byte
+  // 16 - 2047 - 2 bytes
+  string name = 1; // 1 is tag
+  google.protobuf.Int32Value age = 2;
   common.Address address = 3;
-  repeated common.Car car = 4;
+  repeated common.Car car = 16; // not frequent field hence assigning 16
 }
